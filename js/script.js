@@ -2,6 +2,9 @@ const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const gameOver = document.querySelector('.game-over');
 const botao = document.querySelector('.button-mario');
+const score = document.querySelector('.score');
+let count =0;
+let gameRunning = true; 
 
 
 const jump = () => {
@@ -13,14 +16,15 @@ const jump = () => {
 }
 
 const loop =  setInterval(() => {
-    
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replaceAll('px', '');
 
 
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80){
+    gameRunning = false; 
+
     pipe.style.animation = 'none';  
-    pipe.style.left = `${pipePosition}px`; 
+    pipe.style.left = `${pipePosition}px`;  
 
     mario.style.animation = 'none';  
     pipe.style.left = `${marioPosition}px`; 
@@ -34,11 +38,15 @@ const loop =  setInterval(() => {
 
     botao.style.display = 'flex';
 
-
     clearInterval(loop);
     }
 
-}, 10);
+    if (gameRunning) {
+        count++;
+        score.innerHTML = `SCORE: ${count}`;
+    }
+    
+}, 100);
 
 
 document.addEventListener('keydown', jump);  
