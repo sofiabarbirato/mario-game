@@ -42,9 +42,6 @@ Este é um jogo simples inspirado no clássico Mario, desenvolvido utilizando **
    ```
 3. Abra o arquivo `index.html` no navegador.
 
-## 🔍 Demonstração
-
-![Gif do Jogo](images/demo.gif)
 
 ## ⏳ Próximos Passos
 
