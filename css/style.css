@@ -58,7 +58,7 @@
 .button-mario{
     display: none;
     position: absolute;
-    padding: 20px 40px;
+    padding: 20px 40px; 
     font-size: 18px;
     border: 4px solid #FFD700; /* Borda dourada */
     border-radius: 12px; /* Cantos arredondados */
@@ -84,7 +84,19 @@
     box-shadow: 2px 2px 0 #8B0000;
 }
 
-
+.score{
+    padding: 12px;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 24px;
+    background: linear-gradient(#964B00, #ddba09);
+    border-radius: 30px;
+    border: 4px solid #FFD700;
+    box-shadow: 6px 6px 0 #5a2d00;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
 
 @keyframes pipe-animation {
     from{
